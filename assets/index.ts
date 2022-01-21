@@ -3,13 +3,15 @@ import MediaPlayer from "./MediaPlayer";
 // plugins
 import AutoPlay from "./plugins/Autoplay"
 import AutoPause from "./plugins/AutoPause"
+import AdsPlugin from "./plugins/Ads";
 
 
 const video = document.querySelector('video');
 const player = new MediaPlayer({
   el: video, plugins: [
     new AutoPlay(),
-    new AutoPause()
+    new AutoPause(),
+    new AdsPlugin()
   ]
 });
 
